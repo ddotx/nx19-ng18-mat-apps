@@ -15,5 +15,8 @@ npx nx g @nx/angular:library libs/shared/ui
 # (Nx 20)
 npx nx g @nx/angular:library shared-ui --directory libs/shared/ui --style scss --skip-tests
 
+# generate component in ui lib
+npx nx @schematics/angular:component xxx --project=
+
 
 ```

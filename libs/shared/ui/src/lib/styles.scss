@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$ui-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$magenta-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    density: (
+      scale: 0,
+    ),
+    typography: (
+      brand-family: 'Noto Sans Thai',
+      plain-family: 'Noto Sans Thai',
+    ),
+  )
+);
+
+:root {
+  @include mat.all-component-themes($ui-theme);
+  @include mat.typography-hierarchy($ui-theme);
+}
