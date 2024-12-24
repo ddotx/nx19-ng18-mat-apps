@@ -3,7 +3,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
-
 @Component({
   selector: 'lib-form-shared-ui-form-field-override',
   standalone: true,
@@ -17,7 +16,7 @@ export class FormFieldOverrideComponent implements AfterContentInit {
   constructor(private hostRef: ElementRef) { }
 
   ngAfterContentInit(): void {
-    this.isRounded = this.hostRef.nativeElement.classList.contains('field-rounded');
+    // this.isRounded = this.hostRef.nativeElement.classList.contains('field-rounded');
     console.log('FormFieldOverrideComponent.ngAfterContentInit', this.isRounded);
 
   }
