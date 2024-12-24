@@ -1,1 +1,13 @@
 @use '../styles/styles.scss';
+
+:host-context(.theme-1) {
+  .field-rounded {
+    --mdc-outlined-text-field-container-shape: 40px;
+  }
+}
+
+:host(.theme-1) {
+  .field-rounded {
+    --mdc-outlined-text-field-container-shape: 40px;
+  }
+}

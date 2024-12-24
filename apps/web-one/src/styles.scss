@@ -1,10 +1,29 @@
 @use '@angular/material' as mat;
+@use './m3-theme.scss' as m3;
+
+@include mat.core();
+
+:root {
+  @include mat.all-component-themes(m3.$light-theme);
+}
 
 .dialog-container-rec {
   mat-dialog-container {
     @include mat.dialog-overrides(
       (
         container-shape: 0px,
+        container-color: red
+      )
+    );
+  }
+}
+
+.dialog-container-capsule {
+  mat-dialog-container {
+    @include mat.dialog-overrides(
+      (
+        container-shape: 20px,
+        container-color: red
       )
     );
   }

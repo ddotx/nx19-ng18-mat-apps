@@ -23,8 +23,7 @@
           }
         ],
         "styles": [
-          "apps/web-one/src/styles.scss",
-          "libs/shared/ui/src/lib/styles.scss"
+          "apps/web-one/src/styles.scss"
         ],
         "scripts": []
       },
