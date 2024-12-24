@@ -1,5 +1,9 @@
 @use '@angular/material' as mat;
 
+:root {
+  width: 100%;
+}
+
 .dialog-container-rec {
   mat-dialog-container {
     @include mat.dialog-overrides(

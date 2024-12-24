@@ -23,7 +23,9 @@ export class AppComponent {
 
   openDialogOverride(): void {
     this.dialog.open(DialogOverrideComponent, {
-      panelClass: 'dialog-container-rec',
+      panelClass: ['dialog-container-rec'],
+      maxWidth: '100vw',
+      minWidth: '80vw'
     });
   }
 
