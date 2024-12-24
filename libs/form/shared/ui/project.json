@@ -1,8 +1,8 @@
 {
-  "name": "shared-ui",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shared/ui/src",
-  "prefix": "lib-shared-ui",
+  "name": "form-shared-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/form/shared/ui/src",
+  "prefix": "lib-form-shared-ui",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/shared/ui/jest.config.ts"
+        "jestConfig": "libs/form/shared/ui/jest.config.ts"
       }
     },
     "lint": {

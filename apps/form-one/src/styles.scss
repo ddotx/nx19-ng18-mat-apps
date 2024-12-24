@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+$app-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$magenta-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    density: (
+      scale: 0,
+    ),
+    typography: (
+      brand-family: 'Poppins',
+      plain-family: 'Poppins',
+    ),
+  )
+);
+
+:root {
+  @include mat.all-component-themes($app-theme);
+  @include mat.typography-hierarchy($app-theme);
+  @include mat.form-field-overrides(
+    (
+      container-shape: 20px,
+      // container-height: 80px,
+      //!TOKENS NOT USED IN ANGULAR MATERIAL,
+    )
+  );
+}

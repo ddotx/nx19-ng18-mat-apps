@@ -11,12 +11,47 @@ npx create-nx-workspace@19
 npx nx g @nx/angular:app apps/web-two --skip-tests
 
 # add lib
-npx nx g @nx/angular:library libs/shared/ui
-# (Nx 20)
-npx nx g @nx/angular:library shared-ui --directory libs/shared/ui --style scss --skip-tests
+## prefix=lib-*
+npx nx g @nx/angular:library shared-ui --directory libs/shared/ui --prefix <PROJECT_PREFIX> --style scss --skip-tests
 
 # generate component in ui lib
-npx nx @schematics/angular:component xxx --project=
+npx nx generate @schematics/angular:component --name=<NAME> --project=<PROJECT_NAME> --style=scss --skip-tests
 
 
 ```
+
+## Code Organization
+### Structure
+- apps
+  - web-one
+  - web-two
+  - form-one
+  - form-two
+- libs
+  - web
+    - web-one
+      - ui `lib-web-one-ui`
+        - banner-custom
+    - web-two
+      - ui `lib-web-two-ui`
+        - alert-custom
+    - shared
+      - ui `lib-web-shared-ui`
+        - *dialog-override*
+  - form
+    - shared
+      - ui `lib-form-shared-ui`
+        - *form-field-override*
+  - shared
+    - ui `lib-shared-ui`
+      - *button-group*
+
+### Styles & Themes
+- web-one
+  - m3 custom theme
+- web-two
+  - m3 custom theme
+- form-one
+  - prebuilt theme
+- form-two
+  - custom theme

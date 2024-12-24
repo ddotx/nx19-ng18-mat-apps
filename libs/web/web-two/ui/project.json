@@ -1,8 +1,8 @@
 {
-  "name": "shared-ui",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shared/ui/src",
-  "prefix": "lib-shared-ui",
+  "name": "web-two-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/web/web-two/ui/src",
+  "prefix": "lib-web-two-ui",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/shared/ui/jest.config.ts"
+        "jestConfig": "libs/web/web-two/ui/jest.config.ts"
       }
     },
     "lint": {

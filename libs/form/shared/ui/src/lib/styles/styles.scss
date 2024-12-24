@@ -1,0 +1,5 @@
+$border-radius: 40px;
+
+.field-rounded {
+  --mdc-outlined-text-field-container-shape: #{$border-radius};
+}

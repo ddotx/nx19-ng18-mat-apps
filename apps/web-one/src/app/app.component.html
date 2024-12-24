@@ -6,6 +6,10 @@
   <h5>เว็บหนึ่ง - headline-medium H5</h5>
   <h6>เว็บหนึ่ง - headline-small H6</h6>
 </div>
-<lib-shared-ui></lib-shared-ui>
 <lib-button-group></lib-button-group>
+<button mat-button (click)="openDialog()">Launch dialog</button>
+<button mat-button (click)="openDialogOverride()">Launch override dialog</button>
+
+<button mat-button (click)="navigateToUrl()">Navigate to URL</button>
+
 <router-outlet></router-outlet>

@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx19-ng18-mat-apps/shared-ui": ["libs/shared/ui/src/index.ts"]
+      "@nx19-ng18-mat-apps/form-field-override": ["libs/form/shared/ui/src/index.ts"],
+      "@nx19-ng18-mat-apps/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@nx19-ng18-mat-apps/web-one-ui": ["libs/web/web-one/ui/src/index.ts"],
+      "@nx19-ng18-mat-apps/web-shared-ui": ["libs/web/shared/ui/src/index.ts"],
+      "@nx19-ng18-mat-apps/web-two-ui": ["libs/web/web-two/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
