@@ -20,7 +20,40 @@ npx nx generate @schematics/angular:component --name=<NAME> --project=<PROJECT_N
 
 ```
 
+### Angular Libraries
+- Feature Type
+- Data-access Type
+  ```shell
+  npx nx g @nx/angular:library generic-http --directory libs/shared/data-access --prefix lib-shared-data-access
+  ```
+- UI Type
+
+
 ## Code Organization
+### Flowchart
+```mermaid
+flowchart TD;
+    App-->A(web-one):::app;
+    App-->B(web-two):::app;
+    App-->C(form-one):::app;
+    App-->D(form-two):::app;
+    A --> web-one-ui:::lib;
+    B --> web-two-ui:::lib;
+    A --> web-shared-ui:::lib;
+    B --> web-shared-ui:::lib;
+    C --> form-shared-ui:::lib;
+    D --> form-shared-ui:::lib;
+    A --> shared-ui:::shared;
+    B --> shared-ui:::shared;
+    C --> shared-ui:::shared;
+    D --> shared-ui:::shared;
+
+    classDef app stroke:#0f0
+    classDef lib stroke:#f00
+    classDef shared stroke:orange
+
+```
+### CLI
 - Generate angular library (check in project.json)
   ```shell
   # libs/shared/ui

@@ -1,4 +1,4 @@
-import { RestApiService } from '@nx19-ng18-mat-apps/web-shared-data-access';
+import { ApiService } from '@nx19-ng18-mat-apps/web-shared-data-access';
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -11,12 +11,6 @@ import { assassins } from './data';
 @Component({
   standalone: true,
   imports: [RouterModule, ButtonGroupComponent, CardListComponent],
-  providers: [
-    {
-      provide: RestApiService,
-      useClass: RestApiService,
-    }
-  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -26,8 +20,12 @@ export class AppComponent {
   cards: Card[] = assassins;
 
   constructor(@Inject(DOCUMENT) private document: Document,
-    private restApiService: RestApiService
-  ) { }
+    private apiService: ApiService
+  ) {
+    this.apiService.getAll().subscribe(data => {
+      console.log(data);
+    });
+  }
 
   readonly dialog = inject(MatDialog);
   private readonly router = inject(Router);
