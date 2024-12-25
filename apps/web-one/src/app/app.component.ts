@@ -5,10 +5,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router, RouterModule } from '@angular/router';
 import { ButtonGroupComponent } from '@nx19-ng18-mat-apps/shared-ui';
 import { DialogOverrideComponent } from '@nx19-ng18-mat-apps/web-shared-ui';
+import { CardListComponent, Card } from '@ddotx/ddotdev-ui-controls';
+import { assassins } from './data';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, ButtonGroupComponent],
+  imports: [RouterModule, ButtonGroupComponent, CardListComponent],
   providers: [
     {
       provide: RestApiService,
@@ -21,6 +23,7 @@ import { DialogOverrideComponent } from '@nx19-ng18-mat-apps/web-shared-ui';
 })
 export class AppComponent {
   title = 'web-one';
+  cards: Card[] = assassins;
 
   constructor(@Inject(DOCUMENT) private document: Document,
     private restApiService: RestApiService
@@ -49,5 +52,9 @@ export class AppComponent {
   navigateToUrl() {
     // window.open('https://nx.dev', '_blank');
     this.document.location.href = 'https://nx.dev';
+  }
+
+  onCardChange(cards: Card[]) {
+    console.log(cards);
   }
 }

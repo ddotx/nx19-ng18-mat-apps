@@ -1,0 +1,29 @@
+{
+  "name": "shared-feat-ui-controls",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/feat-ui-controls/src",
+  "prefix": "lib-shared-feat-ui-controls",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/shared/feat-ui-controls/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/feat-ui-controls/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/feat-ui-controls/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

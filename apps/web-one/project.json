@@ -22,9 +22,7 @@
             "input": "apps/web-one/public"
           }
         ],
-        "styles": [
-          "apps/web-one/src/styles.scss"
-        ],
+        "styles": ["apps/web-one/src/styles.scss", "libs/shared/feat-ui-controls/src/lib/styles.css"],
         "scripts": []
       },
       "configurations": {

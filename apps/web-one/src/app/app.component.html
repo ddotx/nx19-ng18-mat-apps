@@ -12,4 +12,7 @@
 
 <button mat-button (click)="navigateToUrl()">Navigate to URL</button>
 
-<router-outlet></router-outlet>
+<div>
+  <h1>Assassins Creed Series</h1>
+  <lib-shared-feat-ui-controls-card-list [cards]="cards" (cardChange)="onCardChange($event)"></lib-shared-feat-ui-controls-card-list>
+</div>

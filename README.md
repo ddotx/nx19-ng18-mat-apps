@@ -21,6 +21,12 @@ npx nx generate @schematics/angular:component --name=<NAME> --project=<PROJECT_N
 ```
 
 ## Code Organization
+- Generate angular library (check in project.json)
+  ```shell
+  # libs/shared/ui
+  --name=shared-ui #=project name
+  --prefix=lib-shared-ui
+  ```
 ### Structure
 - apps
   - web-one
@@ -40,6 +46,8 @@ npx nx generate @schematics/angular:component --name=<NAME> --project=<PROJECT_N
         - *dialog-override*
   - form
     - shared
+      - feat-ui-controls
+      - feat-ui-controls-2
       - ui `lib-form-shared-ui`
         - *form-field-override*
   - shared
