@@ -1,4 +1,3 @@
-import { RestApiService } from './../../../../libs/web/shared/data-access/src/lib/restApi.service';
 import { RestApiService } from '@nx19-ng18-mat-apps/web-shared-data-access';
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, inject } from '@angular/core';
