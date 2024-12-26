@@ -24,7 +24,9 @@ npx nx generate @schematics/angular:component --name=<NAME> --project=<PROJECT_N
 - Feature Type
 - Data-access Type
   ```shell
-  npx nx g @nx/angular:library generic-http --directory libs/shared/data-access --prefix lib-shared-data-access
+  npx nx g @nx/angular:library form-shared-data-access --directory libs/form/shared/data-access --prefix lib-form-shared-data-access
+
+  npx nx g @nx/angular:library shared-data-access --directory libs/shared/data-access --prefix lib-shared-data-access
   ```
 - UI Type
 
@@ -77,15 +79,18 @@ flowchart TD;
     - shared
       - ui `lib-web-shared-ui`
         - *dialog-override*
+      - data-access
   - form
     - shared
       - feat-ui-controls
       - feat-ui-controls-2
       - ui `lib-form-shared-ui`
         - *form-field-override*
+      - data-access
   - shared
     - ui `lib-shared-ui`
       - *button-group*
+    - data-access
 
 ### Styles & Themes
 - web-one

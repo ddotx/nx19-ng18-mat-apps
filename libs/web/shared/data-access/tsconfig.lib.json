@@ -8,5 +8,9 @@
     "types": []
   },
   "exclude": ["src/**/*.spec.ts", "src/test-setup.ts", "jest.config.ts", "src/**/*.test.ts"],
-  "include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "../../../shared/data-access/src/lib/generic-http.service.ts",
+    "../../../shared/data-access/src/lib/model-adapter.interface.ts"
+  ]
 }
