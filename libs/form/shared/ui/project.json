@@ -4,7 +4,7 @@
   "sourceRoot": "libs/form/shared/ui/src",
   "prefix": "lib-form-shared-ui",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:form", "type:ui"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

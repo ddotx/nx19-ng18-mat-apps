@@ -4,20 +4,16 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/form-two/src",
-  "tags": [],
+  "tags": ["scope:form-two", "type:app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/form-two",
         "index": "apps/form-two/src/index.html",
         "browser": "apps/form-two/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/form-two/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -28,9 +24,7 @@
           "apps/form-two/src/assets",
           "apps/form-two/src/assets/api"
         ],
-        "styles": [
-          "apps/form-two/src/styles.scss"
-        ],
+        "styles": ["apps/form-two/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -86,9 +80,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/form-two/jest.config.ts"
       }

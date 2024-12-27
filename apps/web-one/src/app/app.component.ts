@@ -16,13 +16,15 @@ import { assassins } from './data';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  env = import.meta.env['NG_APP_ENV'];
+  appName = import.meta.env['NG_APP_NAME'];
   title = 'web-one';
   cards: Card[] = assassins;
 
-  constructor(@Inject(DOCUMENT) private document: Document,
-    private apiService: ApiService
-  ) {
-    this.apiService.getAll().subscribe(data => {
+  constructor(@Inject(DOCUMENT) private document: Document, private apiService: ApiService) {
+    console.log('env', this.env);
+    console.log('appName', this.appName);
+    this.apiService.getAll().subscribe((data) => {
       console.log(data);
     });
   }
@@ -31,13 +33,11 @@ export class AppComponent {
   private readonly router = inject(Router);
   // private readonly restApiService = inject(RestApiService);
 
-
   openDialogOverride(): void {
-
     this.dialog.open(DialogOverrideComponent, {
       panelClass: ['dialog-container-rec'],
       maxWidth: '100vw',
-      minWidth: '80vw'
+      minWidth: '80vw',
     });
   }
 

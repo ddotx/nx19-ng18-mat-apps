@@ -2,6 +2,7 @@
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
+
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 
 ```shell
@@ -62,6 +63,22 @@ flowchart TD;
   --name=shared-ui #=project name
   --prefix=lib-shared-ui
   ```
+### Module Boundaries
+| **Apps, Libs** | **Type** | **Scope** |
+| -------------- | -------- | --------- |
+| web-one        | app      | web-one   |
+| web-two        | app      | web-two   |
+| form-one       | app      | form-one  |
+| form-two       | app      | form-two  |
+| web-one-ui     | ui       | web-one   |
+| web-shared-ui  | ui       | web       |
+| web-two-ui     | ui       | web-two   |
+| form-shared-ui | ui       | form      |
+| shared-ui      | ui       | shared    |
+
+
+
+
 ### Structure
 - apps
   - web-one

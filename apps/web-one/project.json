@@ -4,10 +4,10 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/web-one/src",
-  "tags": [],
+  "tags": ["scope:web-one", "type:app"],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@ngx-env/builder:application",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/web-one",
@@ -50,7 +50,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@ngx-env/builder:dev-server",
       "configurations": {
         "production": {
           "buildTarget": "web-one:build:production"

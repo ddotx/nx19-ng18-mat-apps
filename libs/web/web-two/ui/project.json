@@ -4,7 +4,7 @@
   "sourceRoot": "libs/web/web-two/ui/src",
   "prefix": "lib-web-two-ui",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:web-two", "type:ui"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
